@@ -76,7 +76,7 @@ def rotate():
 def polarize():
     button_pressed = False
    
-    post_to_api()
+    # post_to_api()
 
     # This is where the sms message(s) would be sent if we had paid for Twilio
     # send_sms(account_sid, auth_token, from_number, to_number, "Light-induced seizure imminent!"):
