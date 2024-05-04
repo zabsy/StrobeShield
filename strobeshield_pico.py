@@ -62,7 +62,7 @@ def post_to_api():
     
     date = weekday + ", " + day + ", " + month + ", " + year + ", " + hour + ":" + minute + ":" + second
     
-    url = "http://172.20.10.2:5000/"
+    url = "http://172.20.10.2:5000/seizure_events"
     
     data = {"timestamp": date, "description": "Activated by Flashing Lights: Photoepilepsy Risk"}
 
