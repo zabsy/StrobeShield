@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seizure Events</title>
+    <link rel="stylesheet" href="static/styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div class="container"> <!-- Centered container -->
+        <h1>Seizure Events</h1>
+        <table>
+            <tr>
+                <th>Timestamp</th>
+                <th>Description</th>
+            </tr>
+            {% for event in events %}
+            <tr>
+                <td>{{ event.timestamp }}</td>
+                <td>{{ event.description }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
