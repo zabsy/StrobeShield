@@ -57,6 +57,7 @@ def rotate():
 def polarize():
     button_pressed = False
    
+    post_to_api()
     rotate()
    
     print("LOCKED!")
