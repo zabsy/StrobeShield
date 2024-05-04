@@ -1,2 +1,2 @@
 # StrobeShield
-skibidi RIZZLEAR!
+Submission for EurekaHacks
