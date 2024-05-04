@@ -6,7 +6,8 @@ import date
 import utime
 
 # network
-ssid = "MYHDSB"
+ssid = "Abbas's iPhone"
+password = "abbas123"
 
 # init wifi
 wlan = network.WLAN(network.STA_IF)
@@ -61,8 +62,12 @@ def post_to_api():
     
     date = weekday + ", " + day + ", " + month + ", " + year + ", " + hour + ":" + minute + ":" + second
     
-    url = "http://example.com/api"
-    data = {"timestamp": date, "description": "Activated by Flashing Lights: Photoepilepsy Risk", "advisory": "Ensure communication with the loved one. Medical Aid is contacted as specified in setup."}
+    url = "http://172.20.10.2:5000/"
+    
+    data = {"timestamp": date, "description": "Activated by Flashing Lights: Photoepilepsy Risk"}
+
+    # , "advisory": "Ensure communication with the loved one. Medical Aid is contacted as specified in setup."}
+    
     response = urequests.post(url, json=data)
     print(response.text)
 
