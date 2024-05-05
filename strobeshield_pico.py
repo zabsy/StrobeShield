@@ -39,11 +39,6 @@ red = machine.Pin(7, machine.Pin.OUT)
 green = machine.Pin(8, machine.Pin.OUT)
 blue = machine.Pin(9, machine.Pin.OUT)
 
-# get time for posting episodes
-time_curr = utime.localtime(utime.time() - 4*3600)
-
-year, month, day, hour, minute, second, weekday, yearday = time_curr
-
 # list to store 60 occurences of inputs from the PR in a second
 flashing = []
 
@@ -55,7 +50,8 @@ motor.value(0)
 
 # function to use urequests and utime to post events of possible seizures to the API
 def post_to_api():
-    
+
+    # get the current time to post episodes
     time_curr = utime.localtime(utime.time() - 4*3600)
 
     year, month, day, hour, minute, second, weekday, yearday = time_curr
@@ -80,8 +76,10 @@ def rotate():
 # Actions that get called when sufficiently quick "flashes" occur to be dangerous
 def polarize():
     button_pressed = False
-   
-    # post_to_api()
+
+    # Calling the "post" command to send to db
+    post_to_api()
+    # COMMENT OUT BEFORE CONFIGURATION OF THE PI WITH LIBRARIES REQUIRED!
 
     # This is where the sms message(s) would be sent if we had paid for Twilio
     # send_sms(account_sid, auth_token, from_number, to_number, "Light-induced seizure imminent!"):
