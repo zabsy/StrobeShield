@@ -6,8 +6,8 @@ import date
 import utime
 
 # network
-ssid = "Abbas's iPhone"
-password = "abbas123"
+ssid = ""
+password = ""
 
 # init wifi
 wlan = network.WLAN(network.STA_IF)
